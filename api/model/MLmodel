@@ -1,0 +1,8 @@
+flavors:
+  python_function:
+    code: code
+    data: data/cv
+    env: mlflow_env.yml
+    loader_module: wrapper
+    python_version: 3.6.9
+utc_time_created: '2020-06-27 23:27:53.421052'
