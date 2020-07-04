@@ -10,8 +10,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 
 import nltk
-from nltk.corpus import stopwords
-english_stop_words = stopwords.words('english')
+# from nltk.corpus import stopwords
+# english_stop_words = stopwords.words('english')
 from nltk.tokenize import sent_tokenize
 
 from exs import nyt, foxnews, post, jacobin, breitbart, newsweek
