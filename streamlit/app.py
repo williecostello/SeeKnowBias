@@ -13,6 +13,7 @@ import nltk
 # from nltk.corpus import stopwords
 # english_stop_words = stopwords.words('english')
 from nltk.tokenize import sent_tokenize
+nltk.download('punkt')
 
 from exs import nyt, foxnews, post, jacobin, breitbart, newsweek
 
