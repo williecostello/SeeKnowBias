@@ -47,7 +47,7 @@ app.layout = html.Div(
                     "Set bias confidence threshold (how confident the algorithm should be that a sentence is biased)"
                 ),
                 dcc.Slider(
-                    id="confidence-slider", min=0.5, max=1.0, step=0.1, value=0.7,
+                    id="confidence-slider", min=0.5, max=1.0, step=0.05, value=0.7,
                 ),
                 html.H5("Set number of biased words to highlight in each sentence"),
                 dcc.Slider(id="num-words-slider", min=1, max=3, step=1, value=1),
