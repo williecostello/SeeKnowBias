@@ -13,7 +13,7 @@ variables:
   dockerRegistryServiceConnection: '2c586e09-889e-4184-b16a-733caa97efb2'
   imageRepository: 'nbroadseeknowbias'
   containerRegistry: 'seeknowbias.azurecr.io'
-  dockerfilePath: '$(Build.SourcesDirectory)/streamlit/Dockerfile'
+  dockerfilePath: '$(Build.SourcesDirectory)/dash/Dockerfile'
   tag: '$(Build.BuildId)'
   
   # Agent VM image name
