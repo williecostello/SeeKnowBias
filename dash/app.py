@@ -23,9 +23,10 @@ from nltk.tokenize import sent_tokenize
 nltk.download('punkt')
 
 from assets.exs import nyt, foxnews, post, jacobin, breitbart, newsweek
+from dl_model import download
 
 
-
+download()
 
 app = dash.Dash(
     __name__,

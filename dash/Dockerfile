@@ -11,5 +11,5 @@ COPY . ./root/dash
 
 EXPOSE 80 8051
 
-CMD ["python", "./dl_model.py"]
-CMD ["python", "./app.py"]
+CMD ["./dash/app.py"]
+ENTRYPOINT [ "python" ]
