@@ -1,4 +1,4 @@
-from python:3.6-slim
+FROM python:3.6-slim
 
 WORKDIR /root
 
@@ -7,9 +7,8 @@ COPY requirements.txt /root
 RUN pip install --upgrade pip setuptools && \
 	pip install -r /root/requirements.txt --no-cache-dir
 
-COPY . ./root/dash
+COPY . ./dash
 
 EXPOSE 80 8051
 
-CMD ["./dash/app.py"]
-ENTRYPOINT [ "python" ]
+ENTRYPOINT ["python", "./dash/app.py"]
