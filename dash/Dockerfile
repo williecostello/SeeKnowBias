@@ -1,15 +1,15 @@
-FROM python:3.6
+from python:3.6-slim
 
-WORKDIR /
+WORKDIR /root
 
-COPY requirements.txt .
+COPY requirements.txt /root
 
 RUN pip install --upgrade pip setuptools && \
-	pip install -r /requirements.txt --no-cache-dir
+	pip install -r /root/requirements.txt --no-cache-dir
 
-COPY ./ ./
+COPY . ./root/dash
 
-EXPOSE 8050
+EXPOSE 80 8051
 
-
-CMD ["python", "./app.py"]
+CMD ["python", "./root/dash/dl_model.py"]
+CMD ["python", "./root/dash/app.py"]
