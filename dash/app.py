@@ -10,6 +10,7 @@ import pandas as pd
 import joblib
 import logging
 import os
+from pathlib import Path
 
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression
@@ -111,14 +112,13 @@ app.layout = html.Div(
     className="container")
 
 def load_model(file_path):
-    
-    print(os.listdir('root'))
     pickle = open(file_path, 'rb')
     model = joblib.load(pickle)
     pickle.close()
     return model
 
-model = load_model('./root/dash/model.pkl')
+
+model = load_model(Path(__file__).parent.resolve()/"model.pkl")
 
 
 @app.callback([Output('textarea', 'value'),
