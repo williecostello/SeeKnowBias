@@ -11,5 +11,5 @@ COPY . ./root/dash
 
 EXPOSE 80 8051
 
-CMD ["python", "./root/dash/dl_model.py"]
-CMD ["python", "./root/dash/app.py"]
+CMD ["python", "./dash/dl_model.py"]
+CMD ["python", "./dash/app.py"]
