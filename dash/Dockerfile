@@ -7,7 +7,7 @@ COPY requirements.txt /root
 RUN pip install --upgrade pip setuptools && \
 	pip install -r /root/requirements.txt --no-cache-dir
 
-COPY . ./dash
+COPY . /root/dash
 
 EXPOSE 80 8051
 
