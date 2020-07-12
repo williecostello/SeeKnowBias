@@ -118,7 +118,7 @@ def load_model(file_path):
     return model
 
 
-model = load_model(Path(__file__).parent.resolve()/"model.pkl")
+model = load_model("./model.pkl")
 
 
 @app.callback([Output('textarea', 'value'),
