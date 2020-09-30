@@ -1,1 +1,0 @@
-["This is a default CountVectorizer + LogisticRegression classifier."]
