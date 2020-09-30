@@ -4,8 +4,6 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.exceptions import PreventUpdate
 
-
-# Data science packages
 import pandas as pd
 import joblib
 import logging
@@ -17,16 +15,11 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 
 import nltk
-# from nltk.corpus import stopwords
-# english_stop_words = stopwords.words('english')
 from nltk.tokenize import sent_tokenize
 nltk.download('punkt')
 
 from assets.exs import nyt, foxnews, post, jacobin, breitbart, newsweek
-from dl_model import download
 
-
-download()
 
 app = dash.Dash(
     __name__,
@@ -34,6 +27,7 @@ app = dash.Dash(
         "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     ],
 )
+
 
 news_pairs = [
 ("Breitbart", "breitbart"),
@@ -43,6 +37,7 @@ news_pairs = [
 ("Jacobin", "jacobin"),
 ("Newsweek",  "newsweek") 
 ]
+
 
 def get_news_btn(news_label, news_id):
     return html.Button(
@@ -111,12 +106,12 @@ app.layout = html.Div(
     ],
     className="container")
 
+
 def load_model(file_path):
     pickle = open(file_path, 'rb')
     model = joblib.load(pickle)
     pickle.close()
     return model
-
 
 model = load_model("./model.pkl")
 
@@ -229,6 +224,7 @@ def process_text(text, thresh, num_biased):
 
     return children
 
+
 def get_bias_html(word, proba):
 
     return html.Span(
@@ -244,4 +240,3 @@ def isclose(a, b, rel_tol=1e-04, abs_tol=0.0):
 
 if __name__ == "__main__":
     app.run_server(debug=False, host="0.0.0.0", port=8051)
-
