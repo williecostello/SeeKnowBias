@@ -242,4 +242,4 @@ def isclose(a, b, rel_tol=1e-04, abs_tol=0.0):
 
 
 if __name__ == "__main__":
-    app.run_server(debug=False)
+    app.run_server()
