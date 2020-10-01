@@ -5,18 +5,16 @@ import dash_html_components as html
 from dash.exceptions import PreventUpdate
 
 import pandas as pd
-import joblib
-import logging
-import os
-from pathlib import Path
+
+import nltk
+from nltk.tokenize import sent_tokenize
 
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import Pipeline
 
-import nltk
-from nltk.tokenize import sent_tokenize
-nltk.download('punkt')
+import joblib
+import logging
 
 from assets.exs import nyt, foxnews, post, jacobin, breitbart, newsweek
 
