@@ -37,9 +37,9 @@ news_pairs = [
 ("New York Times", "new-york-times"),
 ("Fox News", 'fox-news'),
 ("New York Post", "new-york-post"), 
-("Newsweek",  "newsweek") 
+("Newsweek",  "newsweek") ,
 ("Breitbart", "breitbart"),
-("Jacobin", "jacobin"),
+("Jacobin", "jacobin")
 ]
 
 
