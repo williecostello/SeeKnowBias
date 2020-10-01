@@ -34,12 +34,12 @@ server = app.server
 
 
 news_pairs = [
-("Breitbart", "breitbart"),
-("Fox News", 'fox-news'),
 ("New York Times", "new-york-times"),
+("Fox News", 'fox-news'),
 ("New York Post", "new-york-post"), 
-("Jacobin", "jacobin"),
 ("Newsweek",  "newsweek") 
+("Breitbart", "breitbart"),
+("Jacobin", "jacobin"),
 ]
 
 
