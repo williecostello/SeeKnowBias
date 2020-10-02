@@ -110,10 +110,10 @@ app.layout = html.Div(
     ],
     className="container")
 
-'''
+
 model = joblib.load('model.pkl')
 
-
+'''
 @app.callback([Output('textarea', 'value'),
                 Output("div", "children")],
             [Input("breitbart", "n_clicks"),
