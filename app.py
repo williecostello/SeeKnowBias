@@ -114,7 +114,7 @@ app.layout = html.Div(
 model_pkl = open('model.pkl', 'rb')
 model = joblib.load(model_pkl)
 
-'''
+
 @app.callback([Output('textarea', 'value'),
                 Output("div", "children")],
             [Input("breitbart", "n_clicks"),
@@ -237,7 +237,7 @@ def get_bias_html(word, proba):
 
 def isclose(a, b, rel_tol=1e-04, abs_tol=0.0):
     return abs(a-b) <= max(rel_tol * max(abs(a), abs(b)), abs_tol)
-'''
+
 
 if __name__ == "__main__":
     app.run_server()
