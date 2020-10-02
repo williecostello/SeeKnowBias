@@ -111,7 +111,8 @@ app.layout = html.Div(
     className="container")
 
 
-model = joblib.load('model.pkl')
+model_pkl = open('model.pkl', 'rb')
+model = joblib.load(model_pkl)
 
 '''
 @app.callback([Output('textarea', 'value'),
