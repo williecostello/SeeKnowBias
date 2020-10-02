@@ -1,5 +1,4 @@
 # See.Know.Bias
-[![Build Status](https://dev.azure.com/nicholas0325/SeeKnowBias/_apis/build/status/nbroad1881.SeeKnowBias?branchName=master)](https://dev.azure.com/nicholas0325/SeeKnowBias/_build/latest?definitionId=3&branchName=master)
 
 An app for detecting bias in news media, designed to develop media literacy in today’s youth. Built on a dataset of Wikipedia neutral point-of-view edits, See.Know.Bias uses NLP modelling techniques to automatically identify biased sentences in news articles and highlight the most biased words.
 
