@@ -6,7 +6,9 @@ from dash.exceptions import PreventUpdate
 
 import pandas as pd
 
+import nltk
 from nltk.tokenize import sent_tokenize
+nltk.download('punkt')
 
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LogisticRegression
