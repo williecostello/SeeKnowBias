@@ -111,13 +111,7 @@ app.layout = html.Div(
     className="container")
 
 
-def load_model(file_path):
-    pickle = open(file_path, 'rb')
-    model = joblib.load(pickle)
-    pickle.close()
-    return model
-
-model = load_model('./model.pkl')
+model = joblib.load('model.pkl')
 
 
 @app.callback([Output('textarea', 'value'),
