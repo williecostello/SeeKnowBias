@@ -107,7 +107,7 @@ On Sunday, CNN interviewed a grandmother named Mary Jo Laupp who claimed that sh
 
 # https://jacobinmag.com/2020/06/new-york-city-election-primary-democratic-socialists-of-america
 
-jacobin = '''fter a rollercoaster few months, first with Bernie Sanders dropping out and then with the unprecedented explosion of protest in response to the police murder of George Floyd, there can be little doubt that last night’s elections in New York and Kentucky were a cause for celebration for the Left.
+jacobin = '''After a rollercoaster few months, first with Bernie Sanders dropping out and then with the unprecedented explosion of protest in response to the police murder of George Floyd, there can be little doubt that last night’s elections in New York and Kentucky were a cause for celebration for the Left.
 
 Though results are still coming in, insurgent candidates — many backed by Justice Democrats, the Working Families Party, and the Democratic Socialists of America (DSA) — clearly had a good night. The liberal status quo had a very bad one.
 
