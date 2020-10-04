@@ -59,7 +59,10 @@ app.layout = html.Div(
         html.Div(
             children=[
                 html.H1(children="See.Know.Bias", className="display-1"),
-                # html.H3("Copy & paste an article into the text box below"),
+                html.H2(children=[
+                    "An app for detecting bias in news media. To learn how it works, see our ", 
+                    html.A('concept video', href='https://www.youtube.com/watch?v=m2Gms7ySUJk'),
+                ]),
                 html.Div(children=[
                     dcc.Textarea(id="textarea", 
                             className="col-10 rounded border border-dark", 
