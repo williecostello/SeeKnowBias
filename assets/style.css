@@ -10,6 +10,19 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    text-align: center;
+    font-size: medium;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: #7ecbff;
+}
+
 .biased{
     font-weight: 700;
     display: inline;
