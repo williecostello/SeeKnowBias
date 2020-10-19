@@ -8,6 +8,9 @@ from sklearn.pipeline import Pipeline
 
 import joblib
 
+import warnings
+warnings.filterwarnings('ignore')
+
 def process_data(file_path):
     
     # Read in training data
@@ -23,19 +26,24 @@ def process_data(file_path):
     
     return sent_df
 
-data_path = '~/Downloads/bias_data/WNC/'
+data_path = 'data/bias_data/WNC/'
 
+print('Processing data')
 df_train = process_data(data_path + 'biased.word.train')
 df_dev = process_data(data_path + 'biased.word.dev')
 df_test = process_data(data_path + 'biased.word.test')
+print('Data processed!')
 
 df_full = df_train.append(df_dev).append(df_test).reset_index(drop=True)
 X = df_full['sentence']
 y = df_full['biased']
 
+print('Building model')
 model = Pipeline([('vect', CountVectorizer(stop_words='english', ngram_range=(1, 2))), 
                   ('log', LogisticRegression(C=1)),])
+model = model.fit(X, y)
+print('Model built!')
 
-model = model.fit(X, y);
-
-joblib.dump(model, 'model.pkl');
+print('Saving model')
+joblib.dump(model, 'model.pkl')
+print('Model saved to model.pkl')
